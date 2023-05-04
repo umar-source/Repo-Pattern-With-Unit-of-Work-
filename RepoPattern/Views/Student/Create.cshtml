@@ -1,0 +1,34 @@
+﻿@model RepoPattern.Models.Student
+@{
+
+}
+<h1>Create Student</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label for="FirstName">FirstName</label>
+        <input type="text"  asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="LastName">LastName</label>
+        <input type="text"  asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Age">Age</label>
+        <input type="number" asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="EnrollmentDate">EnrollmentDate</label>
+        <input type="date" asp-for="EnrollmentDate" class="form-control" />
+        <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index">Back to List</a>
+</form>
